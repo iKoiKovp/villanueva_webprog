@@ -16,8 +16,8 @@ const ArticleList = ({ articles }) => {
                     <p className='mt-3 text-sm leading-6 text-amber-600'>
                         {article.content[0].substring(0.150)}...
                     </p>
-                    <Link to={'/articles/${article.name}'}>
-                        <Button to="mt-4">Read More</Button>
+                    <Link to={`/articles/${article.name}`}>
+                        <Button className='mt-4'>Read More</Button>
                     </Link>
                 </article>
             ))}

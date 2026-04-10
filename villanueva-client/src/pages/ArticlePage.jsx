@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom';
 import Button from '../components/Button';
-import articles from '../assets/article-content.js'
+import articles from '../assets/article-content.js';
 
 function ArticlePage( ) {
     const { name } = useParams( );
+    console.log(name);
     const article = articles.find(article => article.name === name);
 
     if (!article) {
@@ -11,7 +12,7 @@ function ArticlePage( ) {
             <div className='flex w-full flex-col gap-6'>
                 <section className='border-y-2 border-amber-900 bg-amber-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8'>
                     <div className='mx-auto max-w-3xl'>
-                        <h1 className='text-3xl font-bold text-amber-900'>Article not found</h1>
+                        <h1 className='text-3xl font-bold !text-amber-900'>Article not found</h1>
                         <Button to="/articles" className='mt-6'>Back to Articles</Button>
                     </div>
                 </section>

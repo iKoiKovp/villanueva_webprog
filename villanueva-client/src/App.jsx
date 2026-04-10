@@ -1,9 +1,11 @@
+import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
 import Layout from './components/Layout';
-import ArticlePage from './pages/ArticleListPage';
+import ArticlePage from './pages/ArticlePage';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import ArticleListPage from './pages/ArticleListPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 const routes = [
   {
