@@ -30,7 +30,7 @@ function ArticlePage( ) {
                     <p className='mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-500'>
                         Article
                     </p>
-                    <h1 className='text-3xl font-bold leading-tight text-amber-900 sm:text-4xl'>
+                    <h1 className='text-3xl font-bold leading-tight !text-amber-900 sm:text-4xl'>
                         {article.title}
                     </h1>
                     <p className='mt-2 text-sm text-amber-500'>

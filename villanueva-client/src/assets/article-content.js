@@ -1,7 +1,14 @@
+import csImg from './cs.webp';
+import dotaImg from './dota.png';
+import lolImg from './lol.jpg';
+import owImg from './overwatch.png';
+import valoImg from './valo.jpg';
+
 const articles = [
     {
         name: "counter-strike",
         title: "Counter-Strike",
+        thumbnail: "/cs.webp",
 
         content: [
             "Counter-Strike is a 5v5 First-Person Shooter game where you can play either as a Counter-terrorist or Terrorist",
@@ -13,6 +20,7 @@ const articles = [
     {
         name: "valorant",
         title: "Valorant",
+        thumbnail: "/valo.jpg",
 
         content: [
             "Valorant is a 5v5 First-Person Shooter game where you would play the agents with abilities from either the Attacker side or the Defender side.",
@@ -24,6 +32,7 @@ const articles = [
     {
         name: "league-of-legends",
         title: "League of Legends",
+        thumbnail: "/lol.jpg",
 
         content: [
             "League of Legends is a 5v5 Multiplayer Online Battle Arena where you would play as one of the champions of the Runeterra.",
@@ -35,6 +44,7 @@ const articles = [
     {
         name: "dota",
         title: "DOTA",
+        thumbnail: "/lol.jpg",
 
         content: [
             "Dota is a 5v5 Multiplayer Online Battle Arena where you can play using various of characters.",
@@ -46,6 +56,7 @@ const articles = [
     {
         name: "overwatch",
         title: "Overwatch",
+        thumbnail: "/overwatch.png",
 
         content: [
             "Overwatch is a 5v5 or 6v6 First-Person Shooter game where you would be playing as an agent of Overwatch or as an agent of Talon.",
