@@ -10,8 +10,8 @@ function ArticlePage( ) {
     if (!article) {
         return (
             <div className='flex w-full flex-col gap-6'>
-                <section className='border-y-2 border-amber-900 bg-amber-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8'>
-                    <div className='mx-auto max-w-3xl'>
+                <section className='flex flex-col items-center border-y-2 border-amber-900 bg-amber-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8'>
+                    <div className='mx-auto max-w-3xl flex flex-col items-center'>
                         <h1 className='text-3xl font-bold !text-amber-900'>Article not found</h1>
                         <Button to="/articles" className='mt-6'>Back to Articles</Button>
                     </div>
@@ -41,8 +41,12 @@ function ArticlePage( ) {
 
             <section className='border-y-2 border-amber-900 bg-amber-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8'>
                 <div className='mx-auto max-w-3xl'>
-                    <div className='flex aspect-4/3 items-center justify-center rounded-[1.25rem] border-2 border-amber-900 bg-amber-200 mb-8'>
-                        <div className='h-24 w-24 border-2 border-amber-300 bg-amber-100' />
+                    <div className='flex aspect-video items-center justify-center rounded-[1.25rem] border-2 border-amber-900 bg-amber-200 mb-8 overflow-hidden'>
+                        <img 
+                            src={article.thumbnail} 
+                            alt={article.title} 
+                            className='h-full w-full object-cover'
+                        />
                     </div>
 
                     <div className='prose prse-sm max-w-none space-y-4 text-amber-700'>

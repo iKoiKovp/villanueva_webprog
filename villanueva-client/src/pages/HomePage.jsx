@@ -1,5 +1,5 @@
 import Button from '../components/Button';
-import homepic1 from '../assets/homepic1.webp';
+import logo from '../assets/IS.webp';
 import feature1 from '../assets/feature1.jpg';
 import feature2 from '../assets/feature2.png';
 import feature3 from '../assets/feature3.png';
@@ -28,7 +28,7 @@ const HomePage = ( ) => {
                     </div>
 
                     <div className="rounded-3xl border-2 border-dashed border-amber-300 bg-amber-100 p-6">
-                        <img src={homepic1} alt='homepic1' />
+                        <img src={logo} alt='logo' />
                     </div>
                 </div>
             </section>
