@@ -18,10 +18,6 @@ const routes = [
         element: <HomePage />,
       },
       {
-        path: 'about',
-        element: <AboutPage />,
-      },
-      {
         path: 'articles',
         element: <ArticleListPage />,
       },
