@@ -1,9 +1,9 @@
-import Button from '../components/Button'
-import visgrid2 from '../assets/visgrid2.jpg';
-import visgrid1 from '../assets/visgrid1.jpeg';
-import visgrid3 from '../assets/visgrid3.jpg';
-import visgrid4 from '../assets/visgrid4.jpg';
-import aboutpic1 from '../assets/aboutpic1.png';
+import Button from '../../components/Button'
+import visgrid2 from '../../assets/visgrid2.jpg';
+import visgrid1 from '../../assets/visgrid1.jpeg';
+import visgrid3 from '../../assets/visgrid3.jpg';
+import visgrid4 from '../../assets/visgrid4.jpg';
+import aboutpic1 from '../../assets/aboutpic1.png';
 
 const AboutPage = () => {
   return (

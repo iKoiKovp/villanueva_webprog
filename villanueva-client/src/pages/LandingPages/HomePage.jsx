@@ -1,8 +1,8 @@
-import Button from '../components/Button';
-import logo from '../assets/IS.webp';
-import feature1 from '../assets/feature1.jpg';
-import feature2 from '../assets/feature2.png';
-import feature3 from '../assets/feature3.png';
+import Button from '../../components/Button';
+import logo from '../../assets/IS.webp';
+import feature1 from '../../assets/feature1.jpg';
+import feature2 from '../../assets/feature2.png';
+import feature3 from '../../assets/feature3.png';
 
 const HomePage = ( ) => {
     return (
