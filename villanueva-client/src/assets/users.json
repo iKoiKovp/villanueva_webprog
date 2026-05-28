@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "firstName": "Jon",
+    "lastName": "Snow",
+    "age": "23",
+    "gender": "male",
+    "contactNumber": "555-0142",
+    "email": "jon.snow@example.com",
+    "role": "admin",
+    "username": "jonsnow",
+    "password": "winteriscoming",
+    "address": "Winterfell",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "firstName": "Cersei",
+    "lastName": "Lannister",
+    "age": "42",
+    "gender": "female",
+    "contactNumber": "555-0198",
+    "email": "cersei.lannister@example.com",
+    "role": "editor",
+    "username": "cerseil",
+    "password": "queen",
+    "address": "Casterly Rock",
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "firstName": "Arya",
+    "lastName": "Stark",
+    "age": "18",
+    "gender": "female",
+    "contactNumber": "555-0201",
+    "email": "arya.stark@example.com",
+    "role": "viewer",
+    "username": "aryastark",
+    "password": "needle",
+    "address": "Winterfell",
+    "isActive": false
+  }
+]

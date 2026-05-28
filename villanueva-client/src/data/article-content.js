@@ -1,8 +1,8 @@
-import csImg from './cs.webp';
-import dotaImg from './dota.png';
-import lolImg from './lol.jpg';
-import owImg from './overwatch.png';
-import valoImg from './valo.jpg';
+import csImg from '../assets/cs.webp';
+import dotaImg from '../assets/dota.png';
+import lolImg from '../assets/lol.jpg';
+import owImg from '../assets/overwatch.png';
+import valoImg from '../assets/valo.jpg';
 
 const articles = [
     {
