@@ -4,7 +4,7 @@ import feature1 from '../../assets/feature1.jpg';
 import feature2 from '../../assets/feature2.png';
 import feature3 from '../../assets/feature3.png';
 
-const HomePage = ( ) => {
+export const HomePage = ( ) => {
     return (
         <div className="flex w-full flex-col gap-6">
             <section className="border-y-2 border-amber-900 bg-amber-50 px-4 py-6 sm:py-8 lg:px-8">
@@ -124,4 +124,4 @@ const HomePage = ( ) => {
     );
 };
 
-export default HomePage;
+export default HomePage ;

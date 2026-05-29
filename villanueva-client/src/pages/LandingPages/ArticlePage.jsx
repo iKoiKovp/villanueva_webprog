@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import Button from '../../components/Button.jsx';
 import articles from '../../data/article-content.js';
 
-function ArticlePage( ) {
+export function ArticlePage( ) {
     const { name } = useParams( );
     console.log(name);
     const article = articles.find(article => article.name === name);

@@ -52,7 +52,7 @@ const monthlyData = [
   { label: 'Apr', generated: 24, completed: 21 },
 ];
 
-export default function ReportsPage() {
+export function ReportsPage() {
   const printRef = useRef(null);
 
   const handlePrint = () => {

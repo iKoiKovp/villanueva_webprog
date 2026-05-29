@@ -5,7 +5,7 @@ import visgrid3 from '../../assets/visgrid3.jpg';
 import visgrid4 from '../../assets/visgrid4.jpg';
 import aboutpic1 from '../../assets/aboutpic1.png';
 
-const AboutPage = () => {
+export const AboutPage = () => {
   return (
     <div className="flex w-full flex-col gap-6">
         <section className="border-y-2 border-amber-900 bg-amber-50 px-4 py-6 sm:oy-8 lg:px-8">
@@ -130,4 +130,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default AboutPage ;

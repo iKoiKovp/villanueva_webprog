@@ -12,12 +12,6 @@ const authLinks = [
   { label: 'Sign Up', to: '/auth/signup' },
 ];
 
-const dashboardLinks = [
-  { label: 'Dashboard', to: '/dashboard' },
-  { label: 'Reports', to: '/dashboard/reports' },
-  { label: 'Users', to: '/dashboard/users' },
-];
-
 const navLinkClassName = ({ isActive }) =>
 [
     'rounded-full border-2 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] transition',
@@ -42,11 +36,6 @@ const NavBar = ( ) => {
                         </NavLink>
                     ))}
                     {authLinks.map((link) => (
-                        <NavLink key={link.to} to={link.to} className={navLinkClassName} aria-label={`Navigate to ${link.label}`}>
-                            {link.label}
-                        </NavLink>
-                    ))}
-                    {dashboardLinks.map((link) => (
                         <NavLink key={link.to} to={link.to} className={navLinkClassName} aria-label={`Navigate to ${link.label}`}>
                             {link.label}
                         </NavLink>

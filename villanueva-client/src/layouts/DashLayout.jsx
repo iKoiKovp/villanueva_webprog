@@ -31,6 +31,7 @@ const dashboardNavItems = [
   { label: 'Dashboard', to: '/dashboard', icon: DashboardIcon },
   { label: 'Reports', to: '/dashboard/reports', icon: BarChartIcon },
   { label: 'Users', to: '/dashboard/users', icon: PeopleIcon },
+  { label: 'Articles', to: '/dashboard/articles', icon: SearchIcon },
 ];
 
 const getPageTitle = (pathname) => {

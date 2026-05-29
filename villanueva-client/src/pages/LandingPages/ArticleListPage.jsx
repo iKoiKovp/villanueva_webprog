@@ -2,7 +2,7 @@ import Button from '../../components/Button.jsx';
 import ArticleList from '../../components/ArticleList.jsx';
 import articles from '../../data/article-content.js';
 
-const ArticleListPage = ( ) => {
+export const ArticleListPage = ( ) => {
     return (
         <div className="flex w-full flex-col gap-6">
             <section className="flex flex-col items-center text-centerborder-y-2 border-amber-900 bg-amber-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
@@ -34,4 +34,4 @@ const ArticleListPage = ( ) => {
     );
 }
 
-export default ArticleListPage;
+export default ArticleListPage ;
