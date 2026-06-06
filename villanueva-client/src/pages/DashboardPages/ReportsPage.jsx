@@ -38,12 +38,20 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-const reportCategories = [
-  { id: 0, value: 35, label: 'Sales' },
-  { id: 1, value: 25, label: 'Users' },
-  { id: 2, value: 20, label: 'Inventory' },
-  { id: 3, value: 20, label: 'Finance' },
-];
+const reportCategories = Object.entries(
+  rows.reduce((counts, row) => {
+    const age = Number(row.age);
+    if (!Number.isFinite(age) || age <= 0) return counts;
+    counts[age] = (counts[age] || 0) + 1;
+    return counts;
+  }, {})
+)
+  .sort(([ageA], [ageB]) => Number(ageA) - Number(ageB))
+  .map(([age, count], index) => ({
+    id: index,
+    value: count,
+    label: `${age}`,
+  }));
 
 const monthlyData = [
   { label: 'Jan', generated: 18, completed: 14 },

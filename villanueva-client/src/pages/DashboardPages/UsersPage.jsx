@@ -22,7 +22,7 @@ import {
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { DataGrid } from '@mui/x-data-grid';
-import { fetchUsers, createUser } from '../../services/UserService';
+import { fetchUsers, createUser, updateUser } from '../../services/UserService';
 
 const roles = ['admin', 'editor', 'viewer'];
 const genders = ['male', 'female', 'other'];
@@ -42,8 +42,8 @@ const blankForm = {
 };
 
 export function UsersPage() {
-  const userRole = localStorage.getItem('userRole');
-  if (!userRole || userRole === 'viewer') {
+  const userRole = localStorage.getItem('userRole')?.toLowerCase();
+  if (!userRole || userRole !== 'admin') {
     return <Navigate to="/dashboard" replace />;
   }
 
@@ -93,6 +93,24 @@ export function UsersPage() {
     }
   };
 
+  const handleToggleActive = async (id) => {
+    const user = users.find((row) => row.id === id);
+    if (!user) return;
+
+    try {
+      setError(null);
+      const updatedStatus = !user.isActive;
+      await updateUser(id, { isActive: updatedStatus });
+      setUsers((prevUsers) =>
+        prevUsers.map((row) =>
+          row.id === id ? { ...row, isActive: updatedStatus } : row
+        )
+      );
+    } catch (err) {
+      setError(err.response?.data?.message || 'Failed to update account status.');
+    }
+  };
+
   const columns = [
     { field: 'username', headerName: 'Username', width: 130 },
     { field: 'firstName', headerName: 'First Name', width: 130 },
@@ -121,6 +139,23 @@ export function UsersPage() {
           color={params.value ? "success" : "default"} 
           size="small" 
         />
+      )
+    },
+    {
+      field: 'actions',
+      headerName: 'Actions',
+      width: 180,
+      sortable: false,
+      filterable: false,
+      renderCell: (params) => (
+        <Button
+          size="small"
+          variant="contained"
+          color={params.row.isActive ? 'error' : 'success'}
+          onClick={() => handleToggleActive(params.row.id)}
+        >
+          {params.row.isActive ? 'Disable' : 'Enable'}
+        </Button>
       )
     },
   ];

@@ -164,6 +164,8 @@ const DashLayout = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const userRole = localStorage.getItem('userRole')?.toLowerCase();
+  const visibleNavItems = dashboardNavItems.filter(({ to }) => to !== '/dashboard/users' || userRole === 'admin');
   const pageTitle = getPageTitle(location.pathname);
 
   const handleDrawerOpen = () => {
@@ -220,7 +222,7 @@ const DashLayout = () => {
         </DrawerHeader>
         <Divider />
         <List>
-          {dashboardNavItems.map(({ label, to, icon: Icon }) => (
+          {visibleNavItems.map(({ label, to, icon: Icon }) => (
             <ListItem key={to} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 component={Link}

@@ -14,6 +14,9 @@ const SignUpPage = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [age, setAge] = useState('18');
+  const [gender, setGender] = useState('Not specified');
+  const [type, setType] = useState('editor');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -30,8 +33,9 @@ const SignUpPage = () => {
         email,
         password,
         username,
-        age: '18',
-        gender: 'Not specified',
+        age,
+        gender,
+        type,
         contactNumber: '0000000000',
         address: 'Not provided',
       };
@@ -106,6 +110,58 @@ const SignUpPage = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+        </div>
+
+        <div>
+          <label htmlFor="signup-age" className="text-sm font-medium text-amber-700">
+            Age
+          </label>
+          <input
+            id="signup-age"
+            type="number"
+            min="1"
+            placeholder="18"
+            className={inputClasses}
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="signup-gender" className="text-sm font-medium text-amber-700">
+            Gender
+          </label>
+          <select
+            id="signup-gender"
+            className={inputClasses}
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+            required
+          >
+            <option value="Not specified">Not specified</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="signup-role" className="text-sm font-medium text-amber-700">
+            Account Role
+          </label>
+          <select
+            id="signup-role"
+            className={inputClasses}
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+          >
+            <option value="editor">Editor</option>
+            <option value="viewer">Viewer</option>
+          </select>
+          <p className="mt-2 text-xs leading-5 text-amber-500">
+            Viewer accounts are restricted from dashboard login. Select editor to sign in to the dashboard.
+          </p>
         </div>
 
         <div>

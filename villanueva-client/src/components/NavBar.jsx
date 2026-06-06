@@ -25,9 +25,7 @@ const NavBar = ( ) => {
         <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-amber-900 bg-amber-100 backdrop-blur">
             <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
                 <NavLink to="/" className="flex items-center gap-3">
-                    <div className="space-y-0.5">
-                        <img src={logo} alt="Logo" className="w-15 h-15 object-contain" />
-                    </div>
+                    <img src={logo} alt="Logo" className="h-12 w-auto object-contain" />
                 </NavLink>
                 <nav className="hidden items-center gap-2 md:flex">
                     {links.map((link) => (

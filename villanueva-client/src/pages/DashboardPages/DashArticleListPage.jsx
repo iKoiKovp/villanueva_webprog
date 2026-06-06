@@ -111,12 +111,12 @@ export function DashArticleListPage() {
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 90 },
-    { field: 'slug', headerName: 'Slug', width: 160 },
+    { field: 'slug', headerName: 'Slug', width: 180 },
     {
       field: 'title',
       headerName: 'Title',
       flex: 1,
-      minWidth: 220,
+      minWidth: 280,
       renderCell: (params) => (
         <Typography variant="body2" sx={{ fontWeight: 600 }}>
           {params.value}
@@ -134,7 +134,7 @@ export function DashArticleListPage() {
       field: 'preview',
       headerName: 'Preview',
       flex: 1,
-      minWidth: 240,
+      minWidth: 300,
       renderCell: (params) => (
         <Typography variant="body2" color="text.secondary" noWrap>
           {params.value}
@@ -219,8 +219,8 @@ export function DashArticleListPage() {
         </TextField>
       </Paper>
 
-      <Paper sx={{ p: 1, minHeight: 520, boxShadow: 2 }}>
-        <Box sx={{ height: 520, width: '100%' }}>
+      <Paper sx={{ p: 1, minHeight: 600, boxShadow: 2 }}>
+        <Box sx={{ height: 600, width: '100%' }}>
           <DataGrid
             rows={filteredRows}
             columns={columns}
