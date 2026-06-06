@@ -45,3 +45,10 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+app.get("/", (req, res) => {
+  res.json({ message: "Villanueva Backend Server is running successfully!" });
+});
+
+// Your existing routes
+app.use("/api/users", userRoutes);
